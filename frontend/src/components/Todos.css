@@ -1,0 +1,109 @@
+.todos {
+  width: 100%;
+}
+
+.todos-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.todos-section h3 {
+  margin-bottom: 1rem;
+  color: #aaa;
+}
+
+.todos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.todo-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.todo-card:hover {
+  border-color: var(--primary-color);
+}
+
+.todo-card.completed {
+  opacity: 0.6;
+}
+
+.todo-card.completed h4 {
+  text-decoration: line-through;
+}
+
+.todo-main {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+  flex: 1;
+}
+
+.todo-checkbox {
+  margin-top: 0.25rem;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.todo-content {
+  flex: 1;
+}
+
+.todo-content h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.todo-description {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.todo-meta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.todo-date,
+.todo-goal {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.todo-goal {
+  color: var(--warning-color);
+}
+
+.todo-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .todo-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .todo-actions {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+  }
+}
